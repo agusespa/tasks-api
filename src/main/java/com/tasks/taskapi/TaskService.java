@@ -29,7 +29,7 @@ public class TaskService {
         editedTask.setTitle(task.getTitle());
         editedTask.setDone(task.isDone());
 
-        if (task.getDueDate() == null) {
+        if (task.getDueDate() == null || task.getDueDate() == "") {
             editedTask.setDueDate(null);
         } else {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
